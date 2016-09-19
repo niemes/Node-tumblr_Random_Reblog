@@ -8,7 +8,6 @@
   "repositories":"https://github.com/spookssi/Node-tumblr_Random_Reblog.git",
   "homepage": "https://niemes.info",
   "dependencies": {
-    "oauth": "^0.9.14",
     "tumblr.js": "^1.0.0"
   }
 }
