@@ -1,0 +1,13 @@
+{
+  "name": "Random-Reblog",
+  "version": "0.0.1",
+  "description": "Random Inspiration Blog",
+  "main": "random-reblog.js",
+  "author": "Niemes",
+  "license": "CC0-1.0",
+  "homepage": "https://niemes.info",
+  "dependencies": {
+    "oauth": "^0.9.14",
+    "tumblr.js": "^1.0.0"
+  }
+}
