@@ -5,6 +5,7 @@
   "main": "random-reblog.js",
   "author": "Niemes",
   "license": "CC0-1.0",
+  "repositories":"https://github.com/spookssi/Node-tumblr_Random_Reblog.git",
   "homepage": "https://niemes.info",
   "dependencies": {
     "oauth": "^0.9.14",
