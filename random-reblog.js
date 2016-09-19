@@ -15,7 +15,8 @@ function init(){
 
   console.log("-------- INIT --------");
   var reblogKey = [], postIdList = [];
-  var tagList = ['design','moma','lol','geek','selfie','landscape','gif','illustration','embroidery','art','junkrat','random','Architecture','streetart','PHOTOGRAPHY','URBAN','GRUNGE','ABANDONED','aesthetic','alchemy','war','peace'];// starter tag.
+  var tagList = ['design','moma','lol','geek','selfie','landscape','gif','illustration','embroidery','art','Architecture','streetart','PHOTOGRAPHY','URBAN','GRUNGE','ABANDONED','aesthetic','war','peace'];
+  // starter tag.
 
   function GetPostKey(){
 
