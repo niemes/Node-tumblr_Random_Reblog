@@ -12,7 +12,7 @@ var client = tumblr.createClient({
 });
 
 function init() {
-    var postNumber = 178; // Number of Post every 24H.
+    var postNumber = 178; // Number of Post every 24H. (250 max)
     var timeToPost = 86400000 / postNumber;
 
     console.log("-------- INIT --------");
@@ -69,7 +69,7 @@ function init() {
                         new error(err));
                     console.log('REBLOG PROBLEM' + err);
                 } else {
-                    // ----------------------------- ERROR LOG -------------------------
+                    // --------- ERROR LOG -----------
                     console.log('Reblog -= [OK] =- ' + data);
                 }
             });
