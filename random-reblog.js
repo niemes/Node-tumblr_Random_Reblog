@@ -76,7 +76,7 @@ function init() {
         }
     }
     setInterval(reblogMachine, timeToPost); // time for reblog 1000 = 1s (max 250 reblog/day)
-    console.log("Time/min before every post : " + ((timeTo / 1000) / 60));
+    console.log("Time/min before every post : " + ((timeToPost / 1000) / 60));
 }
 
 init();
