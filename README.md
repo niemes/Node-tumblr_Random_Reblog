@@ -9,7 +9,13 @@ See <http://stochastique-blog.tumblr.com/> for a live demo.
 1. Clone this repo.
 2. Add your personals consumer_key, secret, token and token secret. Register an App on tumblr api if you don't have one : <https://www.tumblr.com/oauth/apps>. (For token and token_secret see Oauth or <https://github.com/stigok/node-oauth-tumblr-example> .)
 
-  > cd Random-Reblog/ npm install node random-reblog.js
+3.
+
+> cd Random-Reblog/
+
+> npm install
+
+> node random-reblog.js
 
 ## Run in background
 
@@ -32,4 +38,4 @@ If output.log doesn't exist it will be create.
 - avoid duplicate post.
 - Handle error from the tumblr API.
 - Avoid duplicate Tags.
-- Add Taglist in a Json file to keep the list if you stop the script.
+- Add Taglist in a Json file to keep the list if you stop the script. pt. pt.
