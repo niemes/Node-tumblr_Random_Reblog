@@ -17,6 +17,7 @@ function init() {
 
     console.log("-------- INIT --------");
     var reblogKey = [],
+        postList = [],
         postIdList = [];
     var tagList = ['design', 'moma', 'lol', 'geek', 'selfie', 'landscape', 'gif', 'illustration', 'embroidery', 'art', 'Architecture', 'streetart', 'PHOTOGRAPHY', 'URBAN', 'GRUNGE', 'ABANDONED', 'aesthetic', 'war', 'peace'];
     // starter tag.
@@ -36,7 +37,9 @@ function init() {
                         if (data[i].tags !== undefined && (data[i].reblog_key !== undefined || data[i].id !== undefined)) {
                             reblogKey.push(data[i].reblog_key);
                             postIdList.push(data[i].id);
-                            tagList.push(data[i].tags); // If you want to grab some tags...
+                            if (tagList.indexOf(data[i].tags) == -1) { //check tagList.
+                                tagList.push(data[i].tags); //grab some tags.
+                            }
                         }
                     }
                     if (err) {
@@ -58,18 +61,21 @@ function init() {
         var blogName = 'your_tumblr.tumblr.com';
         var myCom = 'A simple comment'; // comment: if you want to add a comment on every rebloged-post. Leave empty if you want.
         if (key !== undefined && postIdList.length !== 0) {
-            client.reblogPost(blogName, {
-                id: postId,
-                reblog_key: key,
-                comment: myCom
-            }, function(err, data) {
-                if (err) {
-                    console.log('REBLOG PROBLEM' + err);
-                } else {
-                    // --------- ERROR LOG -----------
-                    console.log('Reblog -= [OK] =- ' + data);
-                }
-            });
+            if (postList.indexOf(postId) == -1) {
+                client.reblogPost(blogName, {
+                    id: postId,
+                    reblog_key: key,
+                    comment: myCom
+                }, function(err, data) {
+                    if (err) {
+                        console.log('REBLOG ERROR : ' + err);
+                    } else {
+                        postList.push(postId);
+                        // --------- ERROR LOG -----------
+                        console.log('Reblog -= [OK] =- ' + data);
+                    }
+                });
+            }
         }
     }
     setInterval(reblogMachine, timeToPost); // time for reblog 1000 = 1s (max 250 reblog/day)
