@@ -1,5 +1,5 @@
-//______________________________STOCHASTIQUE_BLOG_Bot_______________________________
-//
+//______________________________STOCHASTIQUE_BLOG_Bot___________________________
+//----------------_________________RANDOM_REBLOG_____________-------------------
 //______________________MADE___BY___NIEMES_____INFO =-} niemes.info_____________
 // -----------------------------------------------------------------------------
 //-----------------------Authenticate Tumblr via OAuth--------------------------
@@ -40,8 +40,7 @@ function init() {
                         }
                     }
                     if (err) {
-                        console.log('TAG PROBLEM');
-                        throw new Error(err);
+                        console.log('TAG PROBLEM ' + err);
                     } else {
                         console.log('Tags/Keys/Ids catched -= OK =- ');
                     }
@@ -65,8 +64,6 @@ function init() {
                 comment: myCom
             }, function(err, data) {
                 if (err) {
-                    console.log(
-                        new error(err));
                     console.log('REBLOG PROBLEM' + err);
                 } else {
                     // --------- ERROR LOG -----------
