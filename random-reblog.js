@@ -32,7 +32,7 @@ function init() {
             client.taggedPosts(tag, {
                 filter: 'html'
             }, function(err, data) {
-                if (data !== undefined) {
+                if (data !== null && data !== undefined) {
                     for (var i = 0; i < data.length; i++) {
                         if (data[i].tags !== undefined && (data[i].reblog_key !== undefined || data[i].id !== undefined)) {
                             reblogKey.push(data[i].reblog_key);
