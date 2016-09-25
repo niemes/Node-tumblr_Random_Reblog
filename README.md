@@ -38,4 +38,4 @@ If output.log doesn't exist it will be create.
 - [x] Avoid duplicate post.
 - [ ] Handle error from the tumblr API.
 - [x] Avoid duplicate Tags.
-- [ ] Add Taglist in a Json file to keep the list if you stop the script.
+- [x] Add Taglist in a Json file to keep the list if you stop the script.

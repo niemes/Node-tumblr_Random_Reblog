@@ -8,6 +8,7 @@
     "repository": "https://github.com/niemes/Random_Reblog.git",
     "homepage": "https://niemes.info",
     "dependencies": {
-        "tumblr.js": "^1.0.0"
+        "tumblr.js": "^1.0.0",
+        "jsonfile": "^2.4.0"
     }
 }
