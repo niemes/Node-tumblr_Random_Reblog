@@ -44,20 +44,20 @@ function readList() {
                 var randTag = Math.floor((Math.random() * tagObj.tags.length) + 1);
                 var tag = tagObj.tags[randTag];
 
-                if (tagObj.tags.length < 35000) { // ex 5000 - Size limit of the taglist
-                    client.taggedPosts(tag, {
-                        filter: 'html'
-                    }, function(err, data) {
+                client.taggedPosts(tag, {
+                    filter: 'html'
+                }, function(err, data) {
 
-                        if (data !== null && data.length !== null) {
+                    if (data !== null && data.length !== null) {
 
-                            for (var i = 0; i < data.length; i++) {
+                        for (var i = 0; i < data.length; i++) {
 
-                                if (data[i].tags !== undefined && (data[i].reblog_key !== undefined || data[i].id !== undefined)) {
+                            if (data[i].tags !== undefined && (data[i].reblog_key !== undefined || data[i].id !== undefined)) {
 
-                                    reblogKey.push(data[i].reblog_key);
-                                    postIdList.push(data[i].id);
+                                reblogKey.push(data[i].reblog_key);
+                                postIdList.push(data[i].id);
 
+                                if (tagObj.tags.length < 35000) { // ex 5000 - Size limit of the taglist
                                     if (data[i].tags.length !== 0) {
                                         for (var j = 0; j < data[i].tags.length; j++) {
                                             if (tagObj.tags.indexOf(data[i].tags[j]) == -1) {
@@ -67,21 +67,21 @@ function readList() {
                                     }
                                 }
                             }
-                            if (err) {
-                                console.log('TAG Problem ' + err);
-                            } else {
-                                console.log('Tags/Keys/Ids catched -= OK =- ');
-                                jsonfile.writeFile(tagFile, tagObj, {
-                                    spaces: 2
-                                }, function(err) {
-                                    if (err !== null) {
-                                        console.log("error jsonfile writeFile error : ", err);
-                                    }
-                                });
-                            }
                         }
-                    });
-                }
+                        if (err) {
+                            console.log('TAG Problem ' + err);
+                        } else {
+                            console.log('Tags/Keys/Ids catched -= OK =- ');
+                            jsonfile.writeFile(tagFile, tagObj, {
+                                spaces: 2
+                            }, function(err) {
+                                if (err !== null) {
+                                    console.log("error jsonfile writeFile error : ", err);
+                                }
+                            });
+                        }
+                    }
+                });
             }
             GetPostKey();
             setInterval(GetPostKey, 15000); // Time to grab post = id + key
