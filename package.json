@@ -1,0 +1,26 @@
+{
+  "name": "idiobook",
+  "version": "0.0.1",
+  "description": "Random Inspiration Blog",
+  "main": "stochastique.js",
+  "author": "Niemes",
+  "repositories": "https://github.com/spookssi/Node-tumblr_Random_Reblog.git",
+  "license": "CC0-1.0",
+  "homepage": "https://niemes.info",
+  "dependencies": {
+    "jsonfile": "^4.0.0",
+    "oauth": "^0.9.14",
+    "tumblr.js": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "h"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "idiomaitre"
+  ]
+}
