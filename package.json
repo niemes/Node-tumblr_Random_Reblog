@@ -1,25 +1,33 @@
 {
-  "name": "idiobook",
+  "name": "stochastic-bot",
   "version": "0.0.1",
   "description": "Random Inspiration Blog",
-  "main": "stochastique.js",
+  "main": "./dist/main.js",
   "author": "Niemes",
   "repositories": "https://github.com/spookssi/Node-tumblr_Random_Reblog.git",
   "license": "CC0-1.0",
   "homepage": "https://niemes.info",
   "dependencies": {
+    "chalk": "^5.0.1",
     "jsonfile": "^6.1.0",
     "oauth": "^0.9.14",
-    "tumblr.js": "^1.0.0"
+    "tumblr.js": "^3.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "h"
+    "url": "https://github.com/niemes/Random_Reblog"
   },
   "scripts": {
+    "start": "tsc && node ./dist/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "idiomaitre"
-  ]
+  ],
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^18.7.9",
+    "typescript": "^4.7.4",
+    "bun-types": "^0.1.0"
+  }
 }
