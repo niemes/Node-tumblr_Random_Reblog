@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/node16/tsconfig",
+  "compilerOptions": {
+    "target": "ESNext",
+    "allowJs": true,
+    "declaration": true,
+    "declarationDir": "./dist/",
+    "resolveJsonModule": true,
+    "lib": ["dom", "ESNext"],
+    "outDir": "./dist/"
+},
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
